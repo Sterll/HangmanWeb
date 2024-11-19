@@ -1,0 +1,30 @@
+{
+  "player_name": "Mathieu",
+  "word": "exterieur",
+  "word_test": [
+    101,
+    95,
+    95,
+    101,
+    114,
+    105,
+    101,
+    117,
+    114
+  ],
+  "decouverte": {
+    "101": true,
+    "114": true,
+    "121": true,
+    "97": true
+  },
+  "erreurs": 2,
+  "game_state": 1,
+  "player_won": false,
+  "propositions": [
+    "y",
+    "r",
+    "e",
+    "a"
+  ]
+}
