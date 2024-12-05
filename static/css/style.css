@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #388E3C;
+    --background-color: #2C2C2C; /* Fond gris foncé */
+    --text-color: #FFFFFF;
+    --accent-color: #FFC107;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+/* Le reste du CSS reste inchangé */
+
+header {
+    background: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 600;
+}
+
+nav {
+    background-color: var(--secondary-color);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 1.1em;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav li a:hover {
+    color: var(--accent-color);
+}
+
+.container {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 15px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+}
+
+.score-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #1E1E1E; /* Couleur sombre pour le fond des cartes */
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: var(--text-color); /* Texte blanc */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.card p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+pre {
+    font-family: monospace;
+    font-size: 1em;
+    background-color: #1E1E1E; /* Fond sombre pour le préformaté */
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+    color: var(--text-color); /* Texte blanc */
+}
+
+.message {
+    color: var(--accent-color);
+    font-size: 1.1em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}

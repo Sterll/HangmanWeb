@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeu du Pendu Minecraft - Scores</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Tableau des Scores</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/scores">Scores</a></li>
+            <li><a href="/game">Jouer</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="score-cards">
+            {{range .}}
+            <div class="card">
+                <h3>{{.Name}}</h3>
+                <p>Score : {{.Score}}</p>
+            </div>
+            {{end}}
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Jeu du Pendu Minecraft</p>
+    </footer>
+</body>
+</html>

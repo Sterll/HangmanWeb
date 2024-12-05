@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeu du Pendu Minecraft - Partie en cours</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Jeu du Pendu Minecraft</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/scores">Scores</a></li>
+            <li><a href="/game">Jouer</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        {{if .PlayerName}}
+        <h2>Partie en cours - Joueur : {{.PlayerName}}</h2>
+        <pre>{{.HangmanStage}}</pre>
+        <p>Mot à deviner : <strong>{{.Discovered}}</strong></p>
+        <p>Tentatives restantes : <strong>{{.AttemptsLeft}}</strong></p>
+        <form action="/guess" method="POST" class="form-group">
+            <input type="hidden" name="gameID" value="{{.GameID}}">
+            <label for="guess">Entrez une lettre ou un mot :</label>
+            <input type="text" id="guess" name="guess" required>
+            <button type="submit">Proposer</button>
+        </form>
+        {{if .Message}}
+        <p class="message">{{.Message}}</p>
+        {{end}}
+        {{else}}
+        <h2>Entrez votre pseudo pour commencer</h2>
+        <form action="/game" method="POST" class="form-group">
+            <label for="pseudo">Pseudo :</label>
+            <input type="text" id="pseudo" name="pseudo" required>
+            <button type="submit">Commencer</button>
+        </form>
+        {{if .Message}}
+        <p class="message">{{.Message}}</p>
+        {{end}}
+        {{end}}
+    </div>
+    <footer>
+        <p>&copy; 2023 Jeu du Pendu Minecraft</p>
+    </footer>
+</body>
+</html>
